@@ -58,6 +58,10 @@
     <Compile Include="Biom.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="MonsterCR.cs" />
+    <Compile Include="MonsterWindow.xaml.cs">
+      <DependentUpon>MonsterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Monsters.cs" />
     <Compile Include="RoomNumber.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -71,6 +75,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MonsterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

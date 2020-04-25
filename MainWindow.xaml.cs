@@ -24,11 +24,16 @@ namespace MosterGenWPF
         public List<Biom> BiomList = new List<Biom>();
         public List<Event> EventList = new List<Event>();
         public List<MonsterCR> CRList = new List<MonsterCR>();
+        public List<Monster> MonsterList = new List<Monster>();
+        public List<Monster> CurrentMonsterList = new List<Monster>();
+        public List<Monster> TempMonsterList = new List<Monster>();
 
         public string RoomRoll = "";
         public string BiomRoll = "";
         public string EventRoll = "";
         public string CRRoll = "";
+        public string MonsterRoll1 = "";
+        public string MonsterRoll2 = "";
         public MainWindow()
         {
             InitializeComponent();
@@ -91,6 +96,58 @@ namespace MosterGenWPF
             CRList.Add(new MonsterCR("6", "11"));
 
 
+            //Add Monster
+            MonsterList.Add(new Monster("2", "PlesioSaurus", "80", "1"));
+            MonsterList.Add(new Monster("2", "Grick", "173", "2"));
+            MonsterList.Add(new Monster("2", "Priest", "0", "3"));
+            MonsterList.Add(new Monster("2", "Ochre Jelly", "243", "4"));
+
+            MonsterList.Add(new Monster("3", "Veteran", "350", "1"));
+            MonsterList.Add(new Monster("3", "Knight", "347", "2"));
+            MonsterList.Add(new Monster("3", "Minotaur", "223", "3"));
+            MonsterList.Add(new Monster("3", "Displaced Beast","0", "4"));
+
+            MonsterList.Add(new Monster("4", "Shadow Demon", "64", "1"));
+            MonsterList.Add(new Monster("4", "Chuul", "40", "2"));
+            MonsterList.Add(new Monster("4", "Red Dragon Wyrmling", "98", "3"));
+            MonsterList.Add(new Monster("4", "Weretiger", "0", "4"));
+
+            MonsterList.Add(new Monster("5", "Night Hag", "178", "1"));
+            MonsterList.Add(new Monster("5", "Flesh Golem", "169", "2"));
+            MonsterList.Add(new Monster("5", "Unicorn", "294", "3"));
+            MonsterList.Add(new Monster("5", "Gorgon", "171", "4"));
+
+            MonsterList.Add(new Monster("6", "Chimera", "60", "1"));
+            MonsterList.Add(new Monster("6", "Drider", "120", "2"));
+            MonsterList.Add(new Monster("6", "Vrock", "64", "3"));
+            MonsterList.Add(new Monster("6", "Mammoth", "332", "4"));
+
+            MonsterList.Add(new Monster("7", "Yuan-Ti Abomination", "308", "1"));
+            MonsterList.Add(new Monster("7", "Shield Golem", "271", "2"));
+            MonsterList.Add(new Monster("7", "Mind Flayer", "222", "3"));
+            MonsterList.Add(new Monster("7", "Giant Ape", "0", "4"));
+
+            MonsterList.Add(new Monster("8", "Hydra", "190", "1"));
+            MonsterList.Add(new Monster("8", "Assassin", "343", "2"));
+            MonsterList.Add(new Monster("8", "Green Slaad", "277", "3"));
+            MonsterList.Add(new Monster("8", "Frost Giant", "155", "4"));
+
+            MonsterList.Add(new Monster("9", "FireGiant", "154", "1"));
+            MonsterList.Add(new Monster("9", "Abominatble Yeti", "306", "2"));
+            MonsterList.Add(new Monster("9", "Clay Golem", "168", "3"));
+            MonsterList.Add(new Monster("9", "Nycaloth", "134", "4"));
+
+            MonsterList.Add(new Monster("10", "Death Slaad", "278", "1"));
+            MonsterList.Add(new Monster("10", "Guardian Naga", "234", "2"));
+            MonsterList.Add(new Monster("10", "Stone Golem", "170", "3"));
+            MonsterList.Add(new Monster("10", "Young Red Dragon", "98", "4"));
+
+            MonsterList.Add(new Monster("11", "Roc", "260", "1"));
+            MonsterList.Add(new Monster("11", "Gynosphinx", "282", "2"));
+            MonsterList.Add(new Monster("11", "Horned Devil", "0", "3"));
+            MonsterList.Add(new Monster("11", "Remorhaz", "258", "4"));
+
+
         }
 
         public void Button_Click(object sender, RoutedEventArgs e)
@@ -103,19 +160,19 @@ namespace MosterGenWPF
                 RoomRoll = Convert.ToString(tbxRoomRoll.Text);
 
 
-            if(tbxBiomRoll.Text == "")
+            if (tbxBiomRoll.Text == "")
                 BiomRoll = Convert.ToString(rd.Next(1, 12));
             else
                 BiomRoll = Convert.ToString(tbxBiomRoll.Text);
 
 
-            if(tbxEventRoll.Text == "")
+            if (tbxEventRoll.Text == "")
                 EventRoll = Convert.ToString(rd.Next(1, 12));
             else
                 EventRoll = Convert.ToString(tbxEventRoll.Text);
 
 
-            if(tbxCRRoll.Text == "")
+            if (tbxCRRoll.Text == "")
                 CRRoll = Convert.ToString(rd.Next(1, 12));
             else
                 CRRoll = Convert.ToString(tbxCRRoll.Text);
@@ -135,7 +192,7 @@ namespace MosterGenWPF
             EventRoll = Convert.ToString(rd.Next(1, 12));
             CRRoll = Convert.ToString(rd.Next(1, 6));
 
-            
+
 
             GenerateValues();
         }
@@ -147,7 +204,7 @@ namespace MosterGenWPF
             {
                 if (roll.Number == RoomRoll)
                 {
-                    tbxRoomDesc.Text = roll.Room;
+                    tbxRoomDesc.Text = "Current Room " + roll.Room;
                 }
             }
 
@@ -187,5 +244,64 @@ namespace MosterGenWPF
         }
 
 
+
+
+        /* Assign 4 Monsters for each CR and pop them into a list */
+
+        public void AssignMonsterRolls()
+        {
+
+            for (int i = 2; i < 11; i++)
+            {
+                foreach (Monster mon in MonsterList)
+                {
+                    while (mon.MonsterCR == Convert.ToString(i))
+                    {
+                        TempMonsterList.Add(mon);
+                        AssignRDnumbers();
+                    }
+                }
+            }
+        }
+
+        public void AssignRDnumbers()
+        {
+            Random rd = new Random();
+            foreach (Monster mon in TempMonsterList)
+            {
+                string rdnumber = Convert.ToString(rd.Next(1, TempMonsterList.Count()));
+                if (CheckExists(rdnumber) == true)
+                {
+                    mon.MonsterRdNumber = rdnumber;
+                }
+            }
+        }
+
+        public bool CheckExists(string rdnumber)
+        {
+            foreach (Monster moncr in TempMonsterList)
+            {
+                if (moncr.MonsterRdNumber != rdnumber)
+                {
+                    return true;
+                }
+                else return false;
+            }
+            return false;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (RoomRoll == "1")
+            {
+
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MonsterWindow monsterWindow = new MonsterWindow();
+            monsterWindow.Show();
+        }
     }
 }
