@@ -1,0 +1,15 @@
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.csprojAssemblyReference.cache
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MainWindow.g.cs
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\App.g.cs
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF_MarkupCompile.cache
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF_MarkupCompile.lref
+C:\Users\seang\source\repos\MosterGenWPF\bin\Debug\MosterGenWPF.exe.config
+C:\Users\seang\source\repos\MosterGenWPF\bin\Debug\MosterGenWPF.exe
+C:\Users\seang\source\repos\MosterGenWPF\bin\Debug\MosterGenWPF.pdb
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MainWindow.baml
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.g.resources
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.Properties.Resources.resources
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.csproj.GenerateResource.cache
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.csproj.CoreCompileInputs.cache
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.exe
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.pdb
