@@ -93,8 +93,13 @@ namespace MosterGenWPF
             CRList.Add(new MonsterCR("3", "8 + 3"));
             CRList.Add(new MonsterCR("4", "9 + 2"));
             CRList.Add(new MonsterCR("5", "10"));
-            CRList.Add(new MonsterCR("6", "11"));
-
+            CRList.Add(new MonsterCR("6", "5 + 2 + 2"));
+            CRList.Add(new MonsterCR("7", "5 + 4"));
+            CRList.Add(new MonsterCR("8", "4 + 2 + 2"));
+            CRList.Add(new MonsterCR("9", "3 + 6"));
+            CRList.Add(new MonsterCR("10", "3 + 3 + 2"));
+            CRList.Add(new MonsterCR("11", "5 + 4"));
+            CRList.Add(new MonsterCR("12", "8 + 2"));
 
             //Add Monster
             MonsterList.Add(new Monster("2", "PlesioSaurus", "80", "1"));
@@ -105,7 +110,7 @@ namespace MosterGenWPF
             MonsterList.Add(new Monster("3", "Veteran", "350", "1"));
             MonsterList.Add(new Monster("3", "Knight", "347", "2"));
             MonsterList.Add(new Monster("3", "Minotaur", "223", "3"));
-            MonsterList.Add(new Monster("3", "Displaced Beast","0", "4"));
+            MonsterList.Add(new Monster("3", "Displaced Beast", "0", "4"));
 
             MonsterList.Add(new Monster("4", "Shadow Demon", "64", "1"));
             MonsterList.Add(new Monster("4", "Chuul", "40", "2"));
@@ -150,6 +155,7 @@ namespace MosterGenWPF
 
         }
 
+        //Create 
         public void Button_Click(object sender, RoutedEventArgs e)
         {
             Random rd = new Random();
@@ -199,12 +205,14 @@ namespace MosterGenWPF
 
         public void GenerateValues()
         {
+            int addroom = 0;
             //Generate Room
             foreach (RoomNumber roll in RoomList)
             {
                 if (roll.Number == RoomRoll)
                 {
                     tbxRoomDesc.Text = "Current Room " + roll.Room;
+                    addroom = Convert.ToInt32(roll.Room);
                 }
             }
 
@@ -235,6 +243,9 @@ namespace MosterGenWPF
                 }
             }
 
+            //Generate New Room #
+            int roomno = Convert.ToInt32(tbxCurrentRoom.Text) + addroom;
+            tbxCurrentRoom.Text = Convert.ToString(roomno);
 
             tbxRoomRoll.Text = RoomRoll;
             tbxBiomRoll.Text = BiomRoll;
@@ -248,19 +259,29 @@ namespace MosterGenWPF
 
         /* Assign 4 Monsters for each CR and pop them into a list */
 
+        public void GetMonsterList()
+        {
+            Random rd = new Random();
+            int index = rd.Next(MonsterList.Count);
+
+        }
+
+
         public void AssignMonsterRolls()
         {
 
             for (int i = 2; i < 11; i++)
             {
-                foreach (Monster mon in MonsterList)
+                Random rd = new Random();
+                int x = 1;
+                foreach (Monster mon in MonsterList.Where(n => n.MonsterCR == Convert.ToString(i)))
                 {
-                    while (mon.MonsterCR == Convert.ToString(i))
-                    {
-                        TempMonsterList.Add(mon);
-                        AssignRDnumbers();
-                    }
+                    int index = rd.Next(1, 5);                    
+                    mon.MonsterRdNumber = Convert.ToString(index);
+                    TempMonsterList.Add(mon);                   
+                    x++;
                 }
+
             }
         }
 
@@ -292,10 +313,7 @@ namespace MosterGenWPF
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (RoomRoll == "1")
-            {
-
-            }
+            AssignMonsterRolls();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

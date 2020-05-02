@@ -22,7 +22,8 @@ namespace MosterGenWPF
         public MonsterWindow()
         {
             InitializeComponent();
-            lstMonster.ItemsSource = MainWindow.monster
+            MainWindow MW = new MainWindow();
+            lstMonster.ItemsSource = MW.TempMonsterList;
         }
 
 

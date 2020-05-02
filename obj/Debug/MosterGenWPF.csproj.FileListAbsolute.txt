@@ -13,3 +13,5 @@ C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.csproj.GenerateR
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.csproj.CoreCompileInputs.cache
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.exe
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.pdb
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MonsterWindow.g.cs
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MonsterWindow.baml
