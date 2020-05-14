@@ -34,6 +34,8 @@ namespace MosterGenWPF
         public string CRRoll = "";
         public string MonsterRoll1 = "";
         public string MonsterRoll2 = "";
+        public string CurrentMonsterCR = "";
+        public string CurrentRoomRoll = "";
         public MainWindow()
         {
             InitializeComponent();
@@ -78,30 +80,53 @@ namespace MosterGenWPF
             EventList.Add(new Event("2", "DEX Save Poison Arrow + 2 round restrained"));
             EventList.Add(new Event("3", "Change Enemy Size - O=Large, E=Small"));
             EventList.Add(new Event("4", "Walls Open up to reveal an audience watching the fight"));
-            EventList.Add(new Event("5", "STR to open the elevator"));
+            EventList.Add(new Event("5", "STR 16 to open the elevator"));
             EventList.Add(new Event("6", "10 ft gap between elevator and room"));
             EventList.Add(new Event("7", "Reverse Gravity"));
             EventList.Add(new Event("8", "ASK DM"));
-            EventList.Add(new Event("9", "Spikes in ceiling lower 30sec to complete"));
+            EventList.Add(new Event("9", "Giant Magnet, Anything Metal will be pulled to the ground. Str Save to pick back up."));
             EventList.Add(new Event("10", "1d10 Random Floors Electrified"));
-            EventList.Add(new Event("11", "Gain 5 Temp HP"));
+            EventList.Add(new Event("11", "Gain 20 Temp HP"));
             EventList.Add(new Event("12", "Change Player Size  - O=Large, E=Small"));
 
             //Add CR Levels
-            CRList.Add(new MonsterCR("1", "7 + 4"));
-            CRList.Add(new MonsterCR("2", "5 + 6"));
-            CRList.Add(new MonsterCR("3", "8 + 3"));
-            CRList.Add(new MonsterCR("4", "9 + 2"));
-            CRList.Add(new MonsterCR("5", "10"));
-            CRList.Add(new MonsterCR("6", "5 + 2 + 2"));
-            CRList.Add(new MonsterCR("7", "5 + 4"));
-            CRList.Add(new MonsterCR("8", "4 + 2 + 2"));
-            CRList.Add(new MonsterCR("9", "3 + 6"));
-            CRList.Add(new MonsterCR("10", "3 + 3 + 2"));
-            CRList.Add(new MonsterCR("11", "5 + 4"));
-            CRList.Add(new MonsterCR("12", "8 + 2"));
+
+            //2 lvl 10 characters
+            /*
+            CRList.Add(new MonsterCR("1", "8 + 1 + 1"));
+            CRList.Add(new MonsterCR("2", "11"));
+            CRList.Add(new MonsterCR("3", "6 + 4 + 2"));
+            CRList.Add(new MonsterCR("4", "6 + 3 + 3" ));
+            CRList.Add(new MonsterCR("5", "9 + 3"));
+            CRList.Add(new MonsterCR("6", "7 + 3 + 2"));
+            CRList.Add(new MonsterCR("7", "7 + 1 + 1 + 1 + 1 + 1"));
+            CRList.Add(new MonsterCR("8", "7 + 7"));
+            CRList.Add(new MonsterCR("9", "4 + 4 + 4 + 4"));
+            CRList.Add(new MonsterCR("10", "10 + 1 + 1"));
+            CRList.Add(new MonsterCR("11", "12"));
+            CRList.Add(new MonsterCR("12", "8 + 3"));
+            */
+
+            //2 lvl 14 Characters
+            CRList.Add(new MonsterCR("1", "12"));
+            CRList.Add(new MonsterCR("2", "11"));
+            CRList.Add(new MonsterCR("3", "13"));
+            CRList.Add(new MonsterCR("4", "14"));
+            CRList.Add(new MonsterCR("5", "15"));
+            CRList.Add(new MonsterCR("6", "16"));
+            CRList.Add(new MonsterCR("7", "9"));
+            CRList.Add(new MonsterCR("8", "10"));
+            CRList.Add(new MonsterCR("9", "14"));
+            CRList.Add(new MonsterCR("10", "15"));
+            CRList.Add(new MonsterCR("11", "12"));
+            CRList.Add(new MonsterCR("12", "13"));
 
             //Add Monster
+            MonsterList.Add(new Monster("1", "Animated Armor", "19", "1"));
+            MonsterList.Add(new Monster("1", "Quasit", "63", "2"));
+            MonsterList.Add(new Monster("1", "BugBear", "33", "3"));
+            MonsterList.Add(new Monster("1", "Death Dog", "321", "4"));
+
             MonsterList.Add(new Monster("2", "PlesioSaurus", "80", "1"));
             MonsterList.Add(new Monster("2", "Grick", "173", "2"));
             MonsterList.Add(new Monster("2", "Priest", "0", "3"));
@@ -142,7 +167,7 @@ namespace MosterGenWPF
             MonsterList.Add(new Monster("9", "Clay Golem", "168", "3"));
             MonsterList.Add(new Monster("9", "Nycaloth", "134", "4"));
 
-            MonsterList.Add(new Monster("10", "Death Slaad", "278", "1"));
+            MonsterList.Add(new Monster("10", "Deva", "16", "1"));
             MonsterList.Add(new Monster("10", "Guardian Naga", "234", "2"));
             MonsterList.Add(new Monster("10", "Stone Golem", "170", "3"));
             MonsterList.Add(new Monster("10", "Young Red Dragon", "98", "4"));
@@ -152,7 +177,29 @@ namespace MosterGenWPF
             MonsterList.Add(new Monster("11", "Horned Devil", "0", "3"));
             MonsterList.Add(new Monster("11", "Remorhaz", "258", "4"));
 
+            MonsterList.Add(new Monster("12", "Arcanaloth", "313", "1"));
+            MonsterList.Add(new Monster("12", "Archmage", "243", "2"));
+            MonsterList.Add(new Monster("12", "Erinyes", "73", "3"));
 
+            MonsterList.Add(new Monster("13", "Adult Brass Dragon", "105", "1"));
+            MonsterList.Add(new Monster("13", "Beholder", "28", "2"));
+            MonsterList.Add(new Monster("13", "Young Shadow Dragon", "85", "3"));
+            MonsterList.Add(new Monster("13", "Adult white Dragon", "101", "4"));
+
+            MonsterList.Add(new Monster("14", "Adult Black Dragon", "87", "1"));
+            MonsterList.Add(new Monster("14", "Ice Devil", "75", "2"));
+            MonsterList.Add(new Monster("14", "Death Tyrant", "29", "3"));
+            MonsterList.Add(new Monster("14", "Adult Copper Dragon", "88", "4"));
+
+            MonsterList.Add(new Monster("15", "Purple Worm", "255", "1"));
+            MonsterList.Add(new Monster("15", "Mummy Lord", "229", "2"));
+            MonsterList.Add(new Monster("15", "Adult Bronze Dragon", "108", "3"));
+            MonsterList.Add(new Monster("15", "Adult Green Dragon", "0", "4"));
+
+            MonsterList.Add(new Monster("16", "Iron Golem", "170", "1"));
+            MonsterList.Add(new Monster("16", "Marilith", "61", "2"));
+            MonsterList.Add(new Monster("16", "Planetar", "17", "3"));
+            MonsterList.Add(new Monster("16", "Adult Silver Dragon", "117", "4"));
         }
 
         //Create 
@@ -160,27 +207,19 @@ namespace MosterGenWPF
         {
             Random rd = new Random();
 
-            if (tbxRoomRoll.Text == "")
-                RoomRoll = Convert.ToString(rd.Next(1, 12));
-            else
+            if (tbxRoomRoll.Text != "")
                 RoomRoll = Convert.ToString(tbxRoomRoll.Text);
 
 
-            if (tbxBiomRoll.Text == "")
-                BiomRoll = Convert.ToString(rd.Next(1, 12));
-            else
+            if (tbxBiomRoll.Text != "")
                 BiomRoll = Convert.ToString(tbxBiomRoll.Text);
 
 
-            if (tbxEventRoll.Text == "")
-                EventRoll = Convert.ToString(rd.Next(1, 12));
-            else
+            if (tbxEventRoll.Text != "")
                 EventRoll = Convert.ToString(tbxEventRoll.Text);
 
 
-            if (tbxCRRoll.Text == "")
-                CRRoll = Convert.ToString(rd.Next(1, 12));
-            else
+            if (tbxCRRoll.Text != "")
                 CRRoll = Convert.ToString(tbxCRRoll.Text);
 
 
@@ -205,14 +244,14 @@ namespace MosterGenWPF
 
         public void GenerateValues()
         {
-            int addroom = 0;
+            
             //Generate Room
             foreach (RoomNumber roll in RoomList)
             {
                 if (roll.Number == RoomRoll)
                 {
                     tbxRoomDesc.Text = "Current Room " + roll.Room;
-                    addroom = Convert.ToInt32(roll.Room);
+                    CurrentRoomRoll = roll.Room;
                 }
             }
 
@@ -240,13 +279,11 @@ namespace MosterGenWPF
                 if (roll.LVLNumber == CRRoll)
                 {
                     tbxMonterCRDesc.Text = "Level " + roll.LVLDesc + " Monster(s)";
+                    CurrentMonsterCR = roll.LVLDesc;
                 }
             }
 
-            //Generate New Room #
-            int roomno = Convert.ToInt32(tbxCurrentRoom.Text) + addroom;
-            tbxCurrentRoom.Text = Convert.ToString(roomno);
-
+            
             tbxRoomRoll.Text = RoomRoll;
             tbxBiomRoll.Text = BiomRoll;
             tbxEventRoll.Text = EventRoll;
@@ -320,6 +357,73 @@ namespace MosterGenWPF
         {
             MonsterWindow monsterWindow = new MonsterWindow();
             monsterWindow.Show();
+        }
+
+        private void BtnRoom_Click(object sender, RoutedEventArgs e)
+        {
+            int addroom = 0;
+            //addroom = Convert.ToInt32(roll.Room);
+            int room = Convert.ToInt32(tbxRoomRoll.Text);
+            int CurrentRoom = Convert.ToInt32(tbxCurrentRoom.Text);
+            
+            if (room == 1)
+            {
+                addroom = -6;
+            }
+            else if (room == 2)
+            {
+                addroom = -5;
+            }
+            else if (room == 3)
+            {
+                addroom = -4;
+            }
+            else if (room == 4)
+            {
+                addroom = -3;
+            }
+            else if (room == 5)
+            {
+                addroom = -2;
+            }
+            else if (room == 6)
+            {
+                addroom = -1;
+            }
+            else if (room == 7)
+            {
+                addroom = 1;
+            }
+            else if (room == 8)
+            {
+                addroom = 2;
+            }
+            else if (room == 9)
+            {
+                addroom = 3;
+            }
+            else if (room == 10)
+            {
+                addroom = 4;
+            }
+            else if (room == 11)
+            {
+                addroom = 5;
+            }
+            else if (room == 12)
+            {
+                addroom = 6;
+            }
+            
+
+
+            //Generate New Room #
+            if (tbxCurrentRoom.Text != "")
+            {
+                //int roomno = Convert.ToInt32(tbxCurrentRoom.Text) + Convert.ToInt32(CurrentRoomRoll);
+                int roomno = Convert.ToInt32(tbxCurrentRoom.Text) + addroom;
+                tbxCurrentRoom.Text = Convert.ToString(roomno);
+            }
         }
     }
 }

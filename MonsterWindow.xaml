@@ -17,13 +17,14 @@
                             <ColumnDefinition Width="200" />
                         </Grid.ColumnDefinitions>-->
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding MonsterRdNumber}"/>
-                            <TextBlock Text=": " />
                             <TextBlock Text="{Binding MonsterCR}"/>
-                            <TextBlock Text=": " />
+                            <TextBlock Text="   |    " />                            
                             <TextBlock Text="{Binding MonsterName}"/>
-                            <TextBlock Text=" " />
+                            <TextBlock Text=" (" />
                             <TextBlock Text="{Binding MMPage}"/>
+                            <TextBlock Text=")   |    " />
+                            <TextBlock Text="{Binding MonsterRdNumber}"/>
+
                         </StackPanel>
                         
                     </Grid>

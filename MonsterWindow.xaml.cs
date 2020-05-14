@@ -23,7 +23,7 @@ namespace MosterGenWPF
         {
             InitializeComponent();
             MainWindow MW = new MainWindow();
-            lstMonster.ItemsSource = MW.TempMonsterList;
+            lstMonster.ItemsSource = MW.MonsterList;
         }
 
 
