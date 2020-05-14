@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MonsterList" Height="450" Width="800">
     <Grid>
-        <ListBox ItemsSource="{Binding Monsters}" HorizontalAlignment="Left" Height="329" Margin="109,32,0,0" VerticalAlignment="Top" Width="553" Name="lstMonster">
+        <ListBox ItemsSource="{Binding Monsters}" HorizontalAlignment="Left" Height="296" Margin="115,65,0,0" VerticalAlignment="Top" Width="547" Name="lstMonster">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
@@ -18,7 +18,7 @@
                         </Grid.ColumnDefinitions>-->
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding MonsterCR}"/>
-                            <TextBlock Text="   |    " />                            
+                            <TextBlock Text="   |    " />
                             <TextBlock Text="{Binding MonsterName}"/>
                             <TextBlock Text=" (" />
                             <TextBlock Text="{Binding MMPage}"/>
@@ -26,11 +26,12 @@
                             <TextBlock Text="{Binding MonsterRdNumber}"/>
 
                         </StackPanel>
-                        
+
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Label Content="Monster list" HorizontalAlignment="Left" Margin="340,30,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic"/>
 
     </Grid>
 </Window>

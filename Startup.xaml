@@ -1,0 +1,17 @@
+﻿<Window x:Class="MosterGenWPF.Startup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MosterGenWPF"
+        mc:Ignorable="d"
+        Title="Startup" Height="450" Width="800">
+    <Grid>
+        
+        <Button Content="Start!" HorizontalAlignment="Left" Margin="365,311,0,0" VerticalAlignment="Top" Width="75" Name="btnStart" Click="BtnStart_Click"/>
+        <ComboBox HorizontalAlignment="Left" Margin="335,117,0,0" VerticalAlignment="Top" Width="120" Name="cbbPlayers"/>
+        <Label Content="Welcome to the Tower of Luck'n AssHoles" HorizontalAlignment="Left" Margin="80,24,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Showcard Gothic"/>
+        <Label Content="Please Choose your Players:" HorizontalAlignment="Left" Margin="323,75,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -15,3 +15,5 @@ C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.exe
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MosterGenWPF.pdb
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MonsterWindow.g.cs
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MonsterWindow.baml
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\Startup.g.cs
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\Startup.baml
