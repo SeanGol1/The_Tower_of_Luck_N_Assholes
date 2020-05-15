@@ -5,49 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MosterGenWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="443.4" Width="818"
+        Title="MainWindow" Height="600" Width="900"
         Loaded="Window_Loaded">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="img/background.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="151*"/>
-            <RowDefinition Height="269*"/>
-        </Grid.RowDefinitions>
-        
-        <Label Content="Tower of Luck'N Assholes!" HorizontalAlignment="Left" Margin="259,15,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Showcard Gothic"/>
-        
-        <Label Content="Room - D12: " HorizontalAlignment="Left" Margin="71,90,0,0" VerticalAlignment="Top"/>
-        <Label Content="Biom - D12: " HorizontalAlignment="Left" Margin="76,144,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <Label Content="Random Event - D12:" HorizontalAlignment="Left" Margin="29,50.4,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Name="tbxRoomRoll"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.861,2.916" Name="tbxBiomRoll" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,50.4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Name="tbxEventRoll" Grid.Row="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,109.4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Name="tbxCRRoll" Grid.Row="1"/>
-        
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="243,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Name="tbxRoomDesc"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="243,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Name="tbxBiomDesc" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="243,50.4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Name="tbxEventDesc" Grid.Row="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="243,109.4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Name="tbxMonterCRDesc" Grid.Row="1"/>
-        
-        <Button Content="Create" HorizontalAlignment="Left" Margin="572,40,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="Random" HorizontalAlignment="Left" Margin="675,40,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        
-        
-        <Label Content="Monter Lvl - D12:" HorizontalAlignment="Left" Margin="46,108.8,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <Label Content="Monster (Highest Level):" HorizontalAlignment="Left" Margin="10,160.4,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <Label Content="Monster (Highest Level):" HorizontalAlignment="Left" Margin="10,211.4,0,0" VerticalAlignment="Top" Grid.Row="2"/>
 
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="243,160.4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Name="tbxMonsterName1" Grid.Row="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,160.4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" x:Name="tbxMonsterRoll1" Grid.Row="1"/>
-        
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,211.4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" x:Name="tbxMonsterRoll2" Grid.Row="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="243,213.4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" x:Name="tbxMonsterName2" Grid.Row="1"/>
-        <Button Content="Get Monsters" HorizontalAlignment="Left" Margin="559,75,0,0" VerticalAlignment="Top" Width="88" Click="Button_Click_2"/>
-        <Button Content="Current Monster List" HorizontalAlignment="Left" Margin="665,75,0,0" VerticalAlignment="Top" Width="119" Click="Button_Click_3"/>
-        <Label Content="Current Room: " HorizontalAlignment="Left" Margin="52,30,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="152,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="46" Name="tbxCurrentRoom"/>
-        <Button Content="Go" HorizontalAlignment="Left" Margin="217,38,0,0" VerticalAlignment="Top" Width="37" Name="btnRoom" Click="BtnRoom_Click"/>
-        <Label Content="No Level Chosen!" HorizontalAlignment="Left" Margin="300,50,0,0" VerticalAlignment="Top" Name="lblPlayerLevel" FontFamily="Stencil" FontSize="16"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Tower of Luck'N Assholes!" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Showcard Gothic" Height="54" Width="441" Foreground="#FFFFD300">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="Red" Offset="0.253"/>
+                    <GradientStop Color="Black" Offset="0.911"/>
+                    <GradientStop Color="#4CFF0000" Offset="0.797"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+
+        <Label Content="Room - D12: " HorizontalAlignment="Left" Margin="89,174,0,0" VerticalAlignment="Top" FontSize="17" Height="31" Width="109" FontFamily="Tw Cen MT" FontWeight="Bold" Foreground="Red" Background="#7F000000"/>
+        <Label Content="Biom - D12: " HorizontalAlignment="Left" Margin="96,219,0,0" VerticalAlignment="Top" FontSize="17" Height="32" Width="102" FontFamily="Tw Cen MT" FontWeight="Bold" Foreground="Red" Background="#7F000000"/>
+        <Label Content="Random Event - D12:" HorizontalAlignment="Left" Margin="30,264,0,0" VerticalAlignment="Top" FontSize="17" Height="32" Width="168" FontFamily="Tw Cen MT" FontWeight="Bold" Foreground="Red" Background="#7F000000"/>
+
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="234,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" Name="tbxRoomRoll" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="234,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" RenderTransformOrigin="0.861,2.916" Name="tbxBiomRoll" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="234,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" Name="tbxEventRoll" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="234,325,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" Name="tbxCRRoll" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="321,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Name="tbxRoomDesc" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="321,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Name="tbxBiomDesc" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Height="44" Margin="321,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Name="tbxEventDesc" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="321,325,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Name="tbxMonterCRDesc" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+
+        <Button Content="Create" HorizontalAlignment="Left" Margin="596,34,0,0" VerticalAlignment="Top" Width="119" Height="28" Click="Button_Click" />
+        <Button Content="Randomize" HorizontalAlignment="Left" Margin="736,33,0,0" VerticalAlignment="Top" Width="119" Height="28" Click="Button_Click_1"/>
+        <Button Content="Get Monsters" HorizontalAlignment="Left" Margin="596,75,0,0" VerticalAlignment="Top" Width="119"  Height="28" Click="Button_Click_2"/>
+        <Button Content="Current Monster List" HorizontalAlignment="Left" Margin="736,75,0,0" VerticalAlignment="Top" Width="119"  Height="28" Click="Button_Click_3"/>
+
+        <Label Content="Monter Lvl - D12:" HorizontalAlignment="Left" Name="lblMonsterRoll" Margin="50,325,0,0" VerticalAlignment="Top" FontSize="17" Height="32" Width="139" FontFamily="Tw Cen MT" FontWeight="Bold" Foreground="Red" Background="#7F000000"/>
+        <Label Content="Monster (Highest Level):" HorizontalAlignment="Left" Margin="15,376,0,0" VerticalAlignment="Top" FontSize="17" Height="31" Width="192" FontFamily="Tw Cen MT" FontWeight="Bold" Foreground="Red" Background="#7F000000"/>
+        <Label Content="Monster (Highest Level):" HorizontalAlignment="Left" Margin="15,425,0,0"  VerticalAlignment="Top" FontSize="17" Height="32" Width="192" FontFamily="Tw Cen MT" FontWeight="Bold" Foreground="Red" Background="#7F000000"/>
+
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="321,377,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Name="tbxMonsterName1" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="234,377,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" x:Name="tbxMonsterRoll1" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="234,427,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" x:Name="tbxMonsterRoll2" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="321,429,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" x:Name="tbxMonsterName2" FontSize="17" FontFamily="Tw Cen MT" FontWeight="Bold" Background="#B2FFFFFF"/>
+
+        <Label Content="Current Room: " HorizontalAlignment="Left" Margin="15,120,0,0" VerticalAlignment="Top" FontSize="17" Height="32" Width="123" Foreground="Red" Background="#7F000000"/>
+        <TextBox HorizontalAlignment="Left"  Margin="134,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" Height="35"  Name="tbxCurrentRoom" FontSize="18" FontFamily="Stencil" Background="#B2FFFFFF"/>
+        <Button Content="Go" HorizontalAlignment="Left" Margin="194,117,0,418.4" Width="55" Height="35" Name="btnRoom" Click="BtnRoom_Click"/>
+
+        <Label Content="No Level Chosen!" HorizontalAlignment="Left" Margin="30,72,0,0" VerticalAlignment="Top" Name="lblPlayerLevel" FontFamily="Stencil" FontSize="18" Height="33" Width="160" Foreground="Red" Background="#7F000000"/>
+        <Label Content="Room Event" HorizontalAlignment="Left" Margin="285,120,0,0" VerticalAlignment="Top" x:Name="lblPlayerLevel_Copy" FontFamily="Tw Cen MT Condensed" FontSize="20" Height="32" Width="120" Foreground="Red" Background="#7F000000"/>
 
     </Grid>
 </Window>

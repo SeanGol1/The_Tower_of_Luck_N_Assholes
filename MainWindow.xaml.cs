@@ -29,10 +29,10 @@ namespace MosterGenWPF
         public List<Monster> TempMonsterList = new List<Monster>();
         public List<string> PlayerLevelList = new List<string>();
 
-        public string RoomRoll = "";
-        public string BiomRoll = "";
-        public string EventRoll = "";
-        public string CRRoll = "";
+        public string RoomRoll;
+        public string BiomRoll;
+        public string EventRoll;
+        public string CRRoll;
         public string MonsterRoll1 = "";
         public string MonsterRoll2 = "";
         public string CurrentMonsterCR = "";
@@ -49,6 +49,66 @@ namespace MosterGenWPF
         {
             tbxCurrentRoom.Text = "0";
             lblPlayerLevel.Content = PlayerLVL;
+            //Add CR Levels
+            if (PlayerLVL == "2 x lvl 14")
+            {
+                //2 lvl 14 Characters
+                CRList.Add(new MonsterCR("1", "12"));
+                CRList.Add(new MonsterCR("2", "11"));
+                CRList.Add(new MonsterCR("3", "13"));
+                CRList.Add(new MonsterCR("4", "14"));
+                CRList.Add(new MonsterCR("5", "15"));
+                CRList.Add(new MonsterCR("6", "16"));
+                CRList.Add(new MonsterCR("7", "17"));
+                CRList.Add(new MonsterCR("8", "11"));
+                CRList.Add(new MonsterCR("9", "14"));
+                CRList.Add(new MonsterCR("10", "15"));
+                CRList.Add(new MonsterCR("11", "12"));
+                CRList.Add(new MonsterCR("12", "13"));
+            }
+            else if (PlayerLVL == "3 x lvl 14")
+            {
+                //2 lvl 14 Characters
+                CRList.Add(new MonsterCR("1", "18"));
+                CRList.Add(new MonsterCR("2", "11"));
+                CRList.Add(new MonsterCR("3", "13"));
+                CRList.Add(new MonsterCR("4", "9"));
+                CRList.Add(new MonsterCR("5", "15"));
+                CRList.Add(new MonsterCR("6", "16"));
+                CRList.Add(new MonsterCR("7", "17"));
+                CRList.Add(new MonsterCR("8", "11"));
+                CRList.Add(new MonsterCR("9", "10"));
+                CRList.Add(new MonsterCR("10", "14"));
+                CRList.Add(new MonsterCR("11", "9"));
+                CRList.Add(new MonsterCR("12", "13"));
+                CRList.Add(new MonsterCR("13", "16"));
+                CRList.Add(new MonsterCR("14", "10"));
+                CRList.Add(new MonsterCR("15", "15"));
+                CRList.Add(new MonsterCR("16", "17"));
+                CRList.Add(new MonsterCR("17", "12"));
+                CRList.Add(new MonsterCR("18", "6"));
+                CRList.Add(new MonsterCR("19", "7"));
+                CRList.Add(new MonsterCR("20", "18"));
+
+                lblMonsterRoll.Content = "Monter Lvl - D20:";
+            }
+            else if (PlayerLVL == "2 x lvl 10")
+            {
+                //2 lvl 10 characters
+                CRList.Add(new MonsterCR("1", "8 + 1 + 1"));
+                CRList.Add(new MonsterCR("2", "11"));
+                CRList.Add(new MonsterCR("3", "6 + 4 + 2"));
+                CRList.Add(new MonsterCR("4", "6 + 3 + 3"));
+                CRList.Add(new MonsterCR("5", "9 + 3"));
+                CRList.Add(new MonsterCR("6", "7 + 3 + 2"));
+                CRList.Add(new MonsterCR("7", "7 + 1 + 1 + 1 + 1 + 1"));
+                CRList.Add(new MonsterCR("8", "7 + 7"));
+                CRList.Add(new MonsterCR("9", "4 + 4 + 4 + 4"));
+                CRList.Add(new MonsterCR("10", "10 + 1 + 1"));
+                CRList.Add(new MonsterCR("11", "12"));
+                CRList.Add(new MonsterCR("12", "8 + 3"));
+
+            }
         }
 
         public void CreateList()
@@ -103,11 +163,13 @@ namespace MosterGenWPF
             PlayerLevelList.Add("3 x lvl 14");
             PlayerLevelList.Add("2 x lvl 10");
             PlayerLevelList.Add("3 x lvl 10");
+            PlayerLevelList.Add("2 x lvl 10");
+            PlayerLevelList.Add("4 x lvl 7");
+            PlayerLevelList.Add("5 x lvl 7");
+            PlayerLevelList.Add("3 x lvl 20");
 
-            lblPlayerLevel.Content = PlayerLVL;
-
-            //Add CR Levels
-            if (PlayerLVL == "2 x lvl 14")
+            //Set the default to 2 lvl 14 Characters. 
+            if (PlayerLVL == "")
             {
                 //2 lvl 14 Characters
                 CRList.Add(new MonsterCR("1", "12"));
@@ -116,31 +178,14 @@ namespace MosterGenWPF
                 CRList.Add(new MonsterCR("4", "14"));
                 CRList.Add(new MonsterCR("5", "15"));
                 CRList.Add(new MonsterCR("6", "16"));
-                CRList.Add(new MonsterCR("7", "9"));
-                CRList.Add(new MonsterCR("8", "10"));
+                CRList.Add(new MonsterCR("7", "17"));
+                CRList.Add(new MonsterCR("8", "11"));
                 CRList.Add(new MonsterCR("9", "14"));
                 CRList.Add(new MonsterCR("10", "15"));
                 CRList.Add(new MonsterCR("11", "12"));
                 CRList.Add(new MonsterCR("12", "13"));
             }
-            else if (PlayerLVL == "2 x lvl 10")
-            {
-                //2 lvl 10 characters
 
-                CRList.Add(new MonsterCR("1", "8 + 1 + 1"));
-                CRList.Add(new MonsterCR("2", "11"));
-                CRList.Add(new MonsterCR("3", "6 + 4 + 2"));
-                CRList.Add(new MonsterCR("4", "6 + 3 + 3"));
-                CRList.Add(new MonsterCR("5", "9 + 3"));
-                CRList.Add(new MonsterCR("6", "7 + 3 + 2"));
-                CRList.Add(new MonsterCR("7", "7 + 1 + 1 + 1 + 1 + 1"));
-                CRList.Add(new MonsterCR("8", "7 + 7"));
-                CRList.Add(new MonsterCR("9", "4 + 4 + 4 + 4"));
-                CRList.Add(new MonsterCR("10", "10 + 1 + 1"));
-                CRList.Add(new MonsterCR("11", "12"));
-                CRList.Add(new MonsterCR("12", "8 + 3"));
-
-            }
 
 
 
@@ -224,6 +269,14 @@ namespace MosterGenWPF
             MonsterList.Add(new Monster("16", "Marilith", "61", "2"));
             MonsterList.Add(new Monster("16", "Planetar", "17", "3"));
             MonsterList.Add(new Monster("16", "Adult Silver Dragon", "117", "4"));
+
+            MonsterList.Add(new Monster("17", "Dragon Turtle", "MM 119", "1"));
+            MonsterList.Add(new Monster("17", "Death Knight", "MM 47", "2"));
+            MonsterList.Add(new Monster("17", "Goristro", "MM 59", "3"));
+            MonsterList.Add(new Monster("17", "Androsphinx", "MM 281", "4"));
+
+            MonsterList.Add(new Monster("18", "Demilich", "MM 48", "1"));
+            
         }
 
         //Create 
@@ -326,7 +379,6 @@ namespace MosterGenWPF
             int index = rd.Next(MonsterList.Count);
 
         }
-
 
         public void AssignMonsterRolls()
         {

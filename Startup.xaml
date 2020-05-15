@@ -6,12 +6,22 @@
         xmlns:local="clr-namespace:MosterGenWPF"
         mc:Ignorable="d"
         Title="Startup" Height="450" Width="800">
-    <Grid>
-        
-        <Button Content="Start!" HorizontalAlignment="Left" Margin="365,311,0,0" VerticalAlignment="Top" Width="75" Name="btnStart" Click="BtnStart_Click"/>
-        <ComboBox HorizontalAlignment="Left" Margin="335,117,0,0" VerticalAlignment="Top" Width="120" Name="cbbPlayers"/>
-        <Label Content="Welcome to the Tower of Luck'n AssHoles" HorizontalAlignment="Left" Margin="80,24,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Showcard Gothic"/>
-        <Label Content="Please Choose your Players:" HorizontalAlignment="Left" Margin="323,75,0,0" VerticalAlignment="Top"/>
+    <Grid OpacityMask="#FF96FC32">
+        <Grid.Background>
+            <ImageBrush ImageSource="img/StartupBackground.jpg"/>
+        </Grid.Background>
+
+        <Button Content="Start!" HorizontalAlignment="Left" Margin="565,330,0,0" VerticalAlignment="Top" Width="160" Height="60" Name="btnStart" Click="BtnStart_Click" FontSize="20" FontFamily="Terminator Two" Background="Red"/>
+        <ComboBox HorizontalAlignment="Left" Margin="100,150,0,0" VerticalAlignment="Top" Width="200" Name="cbbPlayers" FontSize="20" FontFamily="Stencil">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFFF0C0C"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Welcome to the Tower of Luck'n AssHoles!" HorizontalAlignment="Left" Margin="55,10,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Showcard Gothic"/>
+        <Label Content="Please Choose your Players:" HorizontalAlignment="Left" Margin="100,121,0,0" VerticalAlignment="Top" FontFamily="Stencil" Background="#B2FFFFFF" Width="200"/>
 
     </Grid>
 </Window>
