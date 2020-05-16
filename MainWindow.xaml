@@ -15,16 +15,7 @@
 
         </Grid.RowDefinitions>
 
-        <Label Content="Tower of Luck'N Assholes!" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Showcard Gothic" Height="54" Width="441" Foreground="#FFFFD300">
-            <Label.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="Red" Offset="0.253"/>
-                    <GradientStop Color="Black" Offset="0.911"/>
-                    <GradientStop Color="#4CFF0000" Offset="0.797"/>
-                </LinearGradientBrush>
-            </Label.Background>
-        </Label>
+        <Label Content="Tower of Luck'N Assholes!" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Showcard Gothic" Height="54" Width="441" Foreground="#FFFFD300" Background="{x:Null}"/>
 
         <Label Content="Room - D12: " HorizontalAlignment="Left" Margin="89,174,0,0" VerticalAlignment="Top" FontSize="17" Height="31" Width="109" FontFamily="Tw Cen MT" FontWeight="Bold" Foreground="Red" Background="#7F000000"/>
         <Label Content="Biom - D12: " HorizontalAlignment="Left" Margin="96,219,0,0" VerticalAlignment="Top" FontSize="17" Height="32" Width="102" FontFamily="Tw Cen MT" FontWeight="Bold" Foreground="Red" Background="#7F000000"/>

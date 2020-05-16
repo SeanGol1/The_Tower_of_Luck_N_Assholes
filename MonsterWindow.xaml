@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="img/MonsterBackground.jpg"/>
         </Grid.Background>
-        <ListBox ItemsSource="{Binding Monsters}" HorizontalAlignment="Left" Height="270" Margin="200,95,0,0" VerticalAlignment="Top" Width="545" Name="lstMonster" Opacity="0.7" FontSize="20" FontFamily="Stencil">
+        <ListBox ItemsSource="{Binding Monsters}" HorizontalAlignment="Left" Height="270" Margin="200,95,0,0" VerticalAlignment="Top" Width="545" Name="lstMonster" Opacity="0.7" FontSize="20" FontFamily="Stencil" SelectionChanged="LstMonster_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
@@ -37,6 +37,7 @@
         <Label Content="Monster list" HorizontalAlignment="Left" Margin="307,25,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="24" Background="#B2FFFFFF"/>
         <ComboBox HorizontalAlignment="Left" Margin="35,128,0,0" VerticalAlignment="Top" Width="120" Name="cbbMonsterCr" SelectionChanged="CbbMonsterCr_SelectionChanged"/>
         <Label Content="Filter By CR" HorizontalAlignment="Left" Margin="54,95,0,0" VerticalAlignment="Top" FontFamily="Stencil" Background="#B2FFFFFF"/>
+        <Image Name="imgMonster" HorizontalAlignment="Left" Height="200" Margin="10,210,0,0" VerticalAlignment="Top" Width="185"/>
 
     </Grid>
 </Window>

@@ -11,7 +11,7 @@
             <ImageBrush ImageSource="img/StartupBackground.jpg"/>
         </Grid.Background>
 
-        <Button Content="Start!" HorizontalAlignment="Left" Margin="565,330,0,0" VerticalAlignment="Top" Width="160" Height="60" Name="btnStart" Click="BtnStart_Click" FontSize="20" FontFamily="Terminator Two" Background="Red"/>
+        <Button Content="Stick Around!" HorizontalAlignment="Left" Margin="565,330,0,0" VerticalAlignment="Top" Width="200" Height="60" Name="btnStart" Click="BtnStart_Click" FontSize="20" FontFamily="Terminator Two" Background="Red"/>
         <ComboBox HorizontalAlignment="Left" Margin="100,150,0,0" VerticalAlignment="Top" Width="200" Name="cbbPlayers" FontSize="20" FontFamily="Stencil">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">

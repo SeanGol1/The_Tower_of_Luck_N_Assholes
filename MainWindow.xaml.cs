@@ -68,7 +68,7 @@ namespace MosterGenWPF
             }
             else if (PlayerLVL == "3 x lvl 14")
             {
-                //2 lvl 14 Characters
+                //3 lvl 14 Characters
                 CRList.Add(new MonsterCR("1", "18"));
                 CRList.Add(new MonsterCR("2", "11"));
                 CRList.Add(new MonsterCR("3", "13"));
@@ -171,19 +171,27 @@ namespace MosterGenWPF
             //Set the default to 2 lvl 14 Characters. 
             if (PlayerLVL == "")
             {
-                //2 lvl 14 Characters
-                CRList.Add(new MonsterCR("1", "12"));
+                //3 lvl 14 Characters
+                CRList.Add(new MonsterCR("1", "18"));
                 CRList.Add(new MonsterCR("2", "11"));
                 CRList.Add(new MonsterCR("3", "13"));
-                CRList.Add(new MonsterCR("4", "14"));
+                CRList.Add(new MonsterCR("4", "9"));
                 CRList.Add(new MonsterCR("5", "15"));
                 CRList.Add(new MonsterCR("6", "16"));
                 CRList.Add(new MonsterCR("7", "17"));
                 CRList.Add(new MonsterCR("8", "11"));
-                CRList.Add(new MonsterCR("9", "14"));
-                CRList.Add(new MonsterCR("10", "15"));
-                CRList.Add(new MonsterCR("11", "12"));
+                CRList.Add(new MonsterCR("9", "10"));
+                CRList.Add(new MonsterCR("10", "14"));
+                CRList.Add(new MonsterCR("11", "9"));
                 CRList.Add(new MonsterCR("12", "13"));
+                CRList.Add(new MonsterCR("13", "16"));
+                CRList.Add(new MonsterCR("14", "10"));
+                CRList.Add(new MonsterCR("15", "15"));
+                CRList.Add(new MonsterCR("16", "17"));
+                CRList.Add(new MonsterCR("17", "12"));
+                CRList.Add(new MonsterCR("18", "6"));
+                CRList.Add(new MonsterCR("19", "7"));
+                CRList.Add(new MonsterCR("20", "18"));
             }
 
 
@@ -229,10 +237,10 @@ namespace MosterGenWPF
             MonsterList.Add(new Monster("8", "Hydra", "190", "1"));
             MonsterList.Add(new Monster("8", "Assassin", "343", "2"));
             MonsterList.Add(new Monster("8", "Green Slaad", "277", "3"));
-            MonsterList.Add(new Monster("8", "Frost Giant", "155", "4"));
+            MonsterList.Add(new Monster("8", "Fomorian", "136", "4"));
 
-            MonsterList.Add(new Monster("9", "FireGiant", "154", "1"));
-            MonsterList.Add(new Monster("9", "Abominatble Yeti", "306", "2"));
+            MonsterList.Add(new Monster("9", "Bone Devil", "71", "1"));
+            MonsterList.Add(new Monster("9", "Abominable Yeti", "306", "2"));
             MonsterList.Add(new Monster("9", "Clay Golem", "168", "3"));
             MonsterList.Add(new Monster("9", "Nycaloth", "134", "4"));
 
@@ -243,7 +251,7 @@ namespace MosterGenWPF
 
             MonsterList.Add(new Monster("11", "Roc", "260", "1"));
             MonsterList.Add(new Monster("11", "Gynosphinx", "282", "2"));
-            MonsterList.Add(new Monster("11", "Horned Devil", "0", "3"));
+            MonsterList.Add(new Monster("11", "Horned Devil", "74", "3"));
             MonsterList.Add(new Monster("11", "Remorhaz", "258", "4"));
 
             MonsterList.Add(new Monster("12", "Arcanaloth", "313", "1"));
@@ -252,8 +260,8 @@ namespace MosterGenWPF
 
             MonsterList.Add(new Monster("13", "Adult Brass Dragon", "105", "1"));
             MonsterList.Add(new Monster("13", "Beholder", "28", "2"));
-            MonsterList.Add(new Monster("13", "Young Shadow Dragon", "85", "3"));
-            MonsterList.Add(new Monster("13", "Adult white Dragon", "101", "4"));
+            MonsterList.Add(new Monster("13", "Young Red Shadow Dragon", "85", "3"));
+            MonsterList.Add(new Monster("13", "Adult White Dragon", "101", "4"));
 
             MonsterList.Add(new Monster("14", "Adult Black Dragon", "87", "1"));
             MonsterList.Add(new Monster("14", "Ice Devil", "75", "2"));
@@ -431,8 +439,9 @@ namespace MosterGenWPF
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MonsterWindow monsterWindow = new MonsterWindow();
+            MonsterWindow monsterWindow = new MonsterWindow(CRRoll);            
             monsterWindow.Show();
+            
         }
 
         private void BtnRoom_Click(object sender, RoutedEventArgs e)

@@ -13,11 +13,14 @@ namespace MosterGenWPF
         public string MMPage { get; set; }
         public string MonsterRdNumber { get; set; }
 
+        public string imagepath { get; set; }
+
         public Monster(string _MonsterCR, string _name, string _page)
         {
             MonsterCR = _MonsterCR;
             MonsterName = _name;
             MMPage = _page;
+            imagepath = MonsterName + ".png";
 
         }
 

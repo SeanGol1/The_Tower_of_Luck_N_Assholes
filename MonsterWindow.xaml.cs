@@ -22,26 +22,31 @@ namespace MosterGenWPF
         public MainWindow mw = new MainWindow();
         public List<Monster> MonsterFilterList = new List<Monster>();
         public List<String> TempCRList = new List<String>();
+        public String CRLevel;
 
-        public MonsterWindow()
+        public MonsterWindow(string _CRLevel)
         {
             InitializeComponent();
-            
+            CRLevel = _CRLevel;
             lstMonster.ItemsSource = mw.MonsterList;
             //cbbMonsterCr.ItemsSource = mw.CRList;
             GenerateList();
         }
 
+
+
         private void GenerateList()
         {
-            if (mw.CRRoll != "")
+            if (CRLevel != "")
             {
-                cbbMonsterCr.SelectedIndex = Convert.ToInt32(mw.CRRoll) + 1;
+
                 foreach (var item in mw.CRList)
                 {
                     TempCRList.Add(item.LVLDesc);
                 }
                 cbbMonsterCr.ItemsSource = TempCRList;
+                cbbMonsterCr.Items.Refresh();
+                cbbMonsterCr.SelectedIndex = Convert.ToInt32(CRLevel) - 1;
             }
         }
 
@@ -50,14 +55,31 @@ namespace MosterGenWPF
             MonsterFilterList.Clear();
             foreach (Monster mon in mw.MonsterList)
             {
-                if(mon.MonsterCR == cbbMonsterCr.SelectedItem.ToString())
+                if (mon.MonsterCR == cbbMonsterCr.SelectedItem.ToString())
                 {
                     MonsterFilterList.Add(mon);
                 }
             }
             lstMonster.ItemsSource = MonsterFilterList;
             lstMonster.Items.Refresh();
-            //lstMonster.UpdateLayout();
+
+        }
+
+        private void LstMonster_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                Monster SelMonster = (Monster)lstMonster.SelectedItem;
+
+                string fullpath = "C:/Users/seang/source/repos/MosterGenWPF/img/" + SelMonster.MonsterName + ".jpg";
+
+                imgMonster.Source = new BitmapImage(new Uri(fullpath));
+
+            }
+            catch
+            {
+                imgMonster.Source = null;
+            }
+        }
         }
     }
-}
