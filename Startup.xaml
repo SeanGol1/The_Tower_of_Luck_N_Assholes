@@ -12,7 +12,7 @@
         </Grid.Background>
 
         <Button Content="Stick Around!" HorizontalAlignment="Left" Margin="565,330,0,0" VerticalAlignment="Top" Width="200" Height="60" Name="btnStart" Click="BtnStart_Click" FontSize="20" FontFamily="Terminator Two" Background="Red"/>
-        <ComboBox HorizontalAlignment="Left" Margin="100,150,0,0" VerticalAlignment="Top" Width="200" Name="cbbPlayers" FontSize="20" FontFamily="Stencil">
+        <ComboBox HorizontalAlignment="Left" Margin="35,100,0,0" VerticalAlignment="Top" Width="200" Name="cbbPlayers" FontSize="20" FontFamily="Stencil">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFFF0C0C"/>
@@ -20,8 +20,27 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <Label Content="Welcome to the Tower of Luck'n AssHoles!" HorizontalAlignment="Left" Margin="55,10,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Showcard Gothic"/>
-        <Label Content="Please Choose your Players:" HorizontalAlignment="Left" Margin="100,121,0,0" VerticalAlignment="Top" FontFamily="Stencil" Background="#B2FFFFFF" Width="200"/>
+        <Label Content="Welcome to the Tower of Luck'n Assholes!" HorizontalAlignment="Left" Margin="55,10,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Showcard Gothic"/>
+        <Label Content="Please Choose your Players:" HorizontalAlignment="Left" Margin="35,71,0,0" VerticalAlignment="Top" FontFamily="Stencil" Background="#B2FFFFFF" Width="200"/>
+        <Label Content="Prone: Half Speed to stand up." HorizontalAlignment="Left" Margin="55,223,0,0" VerticalAlignment="Top" Background="#BFFFFFFF"/>
+        <Label Content="Equipment: Choose any Non-Magical Starting item in PHB for starting equipment." HorizontalAlignment="Left" Margin="55,254,0,0" VerticalAlignment="Top" Background="#BFFFFFFF"/>
+        <Label Content="Weapons: Free Action to switch weapons." HorizontalAlignment="Left" Margin="55,284,0,0" VerticalAlignment="Top" Background="#BFFFFFFF"/>
+        <Label Content="Room Events" HorizontalAlignment="Left" Margin="520,61,0,0" VerticalAlignment="Top" Background="#BFFFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="505,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="45" AutomationProperties.Name="txtRoomENumber1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="575,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170" AutomationProperties.Name="txtRoomEDescription1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="505,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="45" AutomationProperties.Name="txtRoomENumber2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="575,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170" AutomationProperties.Name="txtRoomEDescription2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="505,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="45" AutomationProperties.Name="txtRoomENumber3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="575,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170" AutomationProperties.Name="txtRoomEDescription3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="505,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="45" AutomationProperties.Name="txtRoomENumber4"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="575,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170" AutomationProperties.Name="txtRoomEDescription4"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="505,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="45" AutomationProperties.Name="txtRoomENumber5"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="575,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170" AutomationProperties.Name="txtRoomEDescription5"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="505,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="45" AutomationProperties.Name="txtRoomENumber6"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="575,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170" AutomationProperties.Name="txtRoomEDescription6"/>
+
+
+
 
     </Grid>
 </Window>

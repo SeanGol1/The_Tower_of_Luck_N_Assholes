@@ -27,7 +27,8 @@ namespace MosterGenWPF
         public List<Monster> MonsterList = new List<Monster>();
         public List<Monster> CurrentMonsterList = new List<Monster>();
         public List<Monster> TempMonsterList = new List<Monster>();
-        public List<string> PlayerLevelList = new List<string>();
+        public List<String> PlayerLevelList = new List<String>();
+        public List<RoomEvent> RoomEventList = new List<RoomEvent>();
 
         public string RoomRoll;
         public string BiomRoll;
@@ -89,6 +90,32 @@ namespace MosterGenWPF
                 CRList.Add(new MonsterCR("18", "6"));
                 CRList.Add(new MonsterCR("19", "7"));
                 CRList.Add(new MonsterCR("20", "18"));
+
+                lblMonsterRoll.Content = "Monter Lvl - D20:";
+            }
+            else if (PlayerLVL == "4 x lvl 14")
+            {
+                //4 lvl 14 Characters
+                CRList.Add(new MonsterCR("1", "21"));
+                CRList.Add(new MonsterCR("2", "15"));
+                CRList.Add(new MonsterCR("3", "13"));
+                CRList.Add(new MonsterCR("4", "14"));
+                CRList.Add(new MonsterCR("5", "15"));
+                CRList.Add(new MonsterCR("6", "16"));
+                CRList.Add(new MonsterCR("7", "17"));
+                CRList.Add(new MonsterCR("8", "14"));
+                CRList.Add(new MonsterCR("9", "19"));
+                CRList.Add(new MonsterCR("10", "18"));
+                CRList.Add(new MonsterCR("11", "17"));
+                CRList.Add(new MonsterCR("12", "20"));
+                CRList.Add(new MonsterCR("13", "16"));
+                CRList.Add(new MonsterCR("14", "20"));
+                CRList.Add(new MonsterCR("15", "15"));
+                CRList.Add(new MonsterCR("16", "17"));
+                CRList.Add(new MonsterCR("17", "16"));
+                CRList.Add(new MonsterCR("18", "19"));
+                CRList.Add(new MonsterCR("19", "18"));
+                CRList.Add(new MonsterCR("20", "20"));
 
                 lblMonsterRoll.Content = "Monter Lvl - D20:";
             }
@@ -161,37 +188,42 @@ namespace MosterGenWPF
             //Add Player Levels
             PlayerLevelList.Add("2 x lvl 14");
             PlayerLevelList.Add("3 x lvl 14");
+            PlayerLevelList.Add("4 x lvl 14");
             PlayerLevelList.Add("2 x lvl 10");
             PlayerLevelList.Add("3 x lvl 10");
             PlayerLevelList.Add("2 x lvl 10");
             PlayerLevelList.Add("4 x lvl 7");
             PlayerLevelList.Add("5 x lvl 7");
             PlayerLevelList.Add("3 x lvl 20");
-
+            /*
+             * 
+             * DEFAULT VALUES
+             * 
+             */
             //Set the default to 2 lvl 14 Characters. 
             if (PlayerLVL == "")
             {
-                //3 lvl 14 Characters
-                CRList.Add(new MonsterCR("1", "18"));
-                CRList.Add(new MonsterCR("2", "11"));
+                //4 lvl 14 Characters
+                CRList.Add(new MonsterCR("1", "21"));
+                CRList.Add(new MonsterCR("2", "15"));
                 CRList.Add(new MonsterCR("3", "13"));
-                CRList.Add(new MonsterCR("4", "9"));
+                CRList.Add(new MonsterCR("4", "14"));
                 CRList.Add(new MonsterCR("5", "15"));
                 CRList.Add(new MonsterCR("6", "16"));
                 CRList.Add(new MonsterCR("7", "17"));
-                CRList.Add(new MonsterCR("8", "11"));
-                CRList.Add(new MonsterCR("9", "10"));
-                CRList.Add(new MonsterCR("10", "14"));
-                CRList.Add(new MonsterCR("11", "9"));
-                CRList.Add(new MonsterCR("12", "13"));
+                CRList.Add(new MonsterCR("8", "14"));
+                CRList.Add(new MonsterCR("9", "19"));
+                CRList.Add(new MonsterCR("10", "18"));
+                CRList.Add(new MonsterCR("11", "17"));
+                CRList.Add(new MonsterCR("12", "20"));
                 CRList.Add(new MonsterCR("13", "16"));
-                CRList.Add(new MonsterCR("14", "10"));
+                CRList.Add(new MonsterCR("14", "20"));
                 CRList.Add(new MonsterCR("15", "15"));
                 CRList.Add(new MonsterCR("16", "17"));
-                CRList.Add(new MonsterCR("17", "12"));
-                CRList.Add(new MonsterCR("18", "6"));
-                CRList.Add(new MonsterCR("19", "7"));
-                CRList.Add(new MonsterCR("20", "18"));
+                CRList.Add(new MonsterCR("17", "16"));
+                CRList.Add(new MonsterCR("18", "19"));
+                CRList.Add(new MonsterCR("19", "18"));
+                CRList.Add(new MonsterCR("20", "20"));
             }
 
 
@@ -284,7 +316,24 @@ namespace MosterGenWPF
             MonsterList.Add(new Monster("17", "Androsphinx", "MM 281", "4"));
 
             MonsterList.Add(new Monster("18", "Demilich", "MM 48", "1"));
-            
+            MonsterList.Add(new Monster("18", "Borborygmos", "GGR 238", "2"));
+            MonsterList.Add(new Monster("18", "Amnizu", "MTF 164", "3"));
+            MonsterList.Add(new Monster("18", "Walking Statue of Waterdeep", "WDH 219", "4"));
+
+            MonsterList.Add(new Monster("19", "Balor", "MM 55", "1"));
+            MonsterList.Add(new Monster("19", "Bael", "MTF 170", "2"));
+            MonsterList.Add(new Monster("19", "Red Abishai", "MTF 160", "3"));
+            MonsterList.Add(new Monster("19", "Imix", "PoTA 214", "4"));
+
+            MonsterList.Add(new Monster("20", "Leviathan", "MTF 198", "1"));
+            MonsterList.Add(new Monster("20", "Nightwalker", "MTF 216", "2"));
+            MonsterList.Add(new Monster("20", "Pit Fiend", "MM 77", "3"));
+            MonsterList.Add(new Monster("20", "Ogrémoch", "PoTA 216", "4"));
+            MonsterList.Add(new Monster("20", "Ancient White Dragon", "MM 100", "5"));
+            MonsterList.Add(new Monster("20", "Ancient Brass Dragon", "MM 104", "6"));
+
+
+
         }
 
         //Create 
@@ -509,6 +558,12 @@ namespace MosterGenWPF
                 int roomno = Convert.ToInt32(tbxCurrentRoom.Text) + addroom;
                 tbxCurrentRoom.Text = Convert.ToString(roomno);
             }
+        }
+
+        private void btnTowerLevel(object sender, RoutedEventArgs e)
+        {
+            TowerLevels tl = new TowerLevels();
+            tl.Show();
         }
     }
 }

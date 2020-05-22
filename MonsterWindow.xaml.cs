@@ -23,6 +23,7 @@ namespace MosterGenWPF
         public List<Monster> MonsterFilterList = new List<Monster>();
         public List<String> TempCRList = new List<String>();
         public String CRLevel;
+        public Monster pubSelMonster = null;
 
         public MonsterWindow(string _CRLevel)
         {
@@ -67,6 +68,7 @@ namespace MosterGenWPF
 
         private void LstMonster_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            pubSelMonster = (Monster)lstMonster.SelectedItem;
             try
             {
                 Monster SelMonster = (Monster)lstMonster.SelectedItem;
@@ -81,5 +83,12 @@ namespace MosterGenWPF
                 imgMonster.Source = null;
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MonsterIMGFullSize Fullimage = new MonsterIMGFullSize(pubSelMonster);
+            Fullimage.Show();
+
         }
+    }
     }

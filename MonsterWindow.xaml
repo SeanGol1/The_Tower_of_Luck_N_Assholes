@@ -38,6 +38,7 @@
         <ComboBox HorizontalAlignment="Left" Margin="35,128,0,0" VerticalAlignment="Top" Width="120" Name="cbbMonsterCr" SelectionChanged="CbbMonsterCr_SelectionChanged"/>
         <Label Content="Filter By CR" HorizontalAlignment="Left" Margin="54,95,0,0" VerticalAlignment="Top" FontFamily="Stencil" Background="#B2FFFFFF"/>
         <Image Name="imgMonster" HorizontalAlignment="Left" Height="200" Margin="10,210,0,0" VerticalAlignment="Top" Width="185"/>
+        <Button Content="Large" HorizontalAlignment="Left" Margin="66,186,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Window>

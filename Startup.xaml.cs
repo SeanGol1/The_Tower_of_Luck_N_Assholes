@@ -29,6 +29,32 @@ namespace MosterGenWPF
 
         private void BtnStart_Click(object sender, RoutedEventArgs e)
         {
+            /*
+            if (txtRoomENumber1.Text != "" || txtRoomENumber1.Text != null)
+            {
+                mw.RoomEventList.Add(new RoomEvent(txtRoomENumber1.Text, txtRoomEDescription1.Text));
+            }
+            if (txtRoomENumber2.Text != "" || txtRoomENumber2.Text != null)
+            {
+                mw.RoomEventList.Add(new RoomEvent(txtRoomENumber2.Text, txtRoomEDescription2.Text));
+            }
+            if (txtRoomENumber3.Text != "" || txtRoomENumber3.Text != null)
+            {
+                mw.RoomEventList.Add(new RoomEvent(txtRoomENumber3.Text, txtRoomEDescription3.Text));
+            }
+            if (txtRoomENumber4.Text != "" || txtRoomENumber4.Text != null)
+            {
+                mw.RoomEventList.Add(new RoomEvent(txtRoomENumber4.Text, txtRoomEDescription4.Text));
+            }
+            if (txtRoomENumber5.Text != "" || txtRoomENumber5.Text != null)
+            {
+                mw.RoomEventList.Add(new RoomEvent(txtRoomENumber5.Text, txtRoomEDescription5.Text));
+            }
+            if (txtRoomENumber6.Text != "" || txtRoomENumber6.Text != null)
+            {
+                mw.RoomEventList.Add(new RoomEvent(txtRoomENumber6.Text, txtRoomEDescription6.Text));
+            }
+            */
 
             mw.PlayerLVL = cbbPlayers.SelectedItem.ToString();
             mw.Show();

@@ -17,3 +17,7 @@ C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MonsterWindow.g.cs
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MonsterWindow.baml
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\Startup.g.cs
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\Startup.baml
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MonsterIMGFullSize.g.cs
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\TowerLevels.g.cs
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\TowerLevels.baml
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MonsterIMGFullSize.baml
