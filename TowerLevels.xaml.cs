@@ -27,7 +27,8 @@ namespace MosterGenWPF
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            // Create a string array with the lines of text
+            /*
+             // Create a string array with the lines of text
             string[] lines = { "First line", "Second line", "Third line" };
 
             // Set a variable to the Documents path.
@@ -40,6 +41,7 @@ namespace MosterGenWPF
                 foreach (string line in lines)
                     outputFile.WriteLine(line);
             }
+            */
         }
 
         private void BtnLoad_Click(object sender, RoutedEventArgs e)
