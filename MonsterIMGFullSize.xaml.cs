@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,13 +25,21 @@ namespace MosterGenWPF
         {
             InitializeComponent();
             SelMon = _SelMon;
-
         }
 
        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            SoundPlayer player = new SoundPlayer();
+            var direct = "C:/Users/seang/source/repos/MosterGenWPF/sounds/Stick-around.wav";
+            player.SoundLocation = direct;
+            try
+            {
+                player.Load();
+                player.Play();
+            }
+            catch (Exception E) { }
             try
             {
                 Monster SelMonster = SelMon;
@@ -44,6 +53,32 @@ namespace MosterGenWPF
             {
                 imgMonster.Source = null;
             }
+        }
+
+        private void BtnWin_Click(object sender, RoutedEventArgs e)
+        {
+            SoundPlayer player = new SoundPlayer();
+            var direct = "C:/Users/seang/source/repos/MosterGenWPF/sounds/fuck-yeah.wav";
+            player.SoundLocation = direct;
+            try
+            {
+                player.Load();
+                player.Play();
+            }
+            catch (Exception E) { }
+        }
+
+        private void BtnLose_Click(object sender, RoutedEventArgs e)
+        {
+            SoundPlayer player = new SoundPlayer();
+            var direct = "C:/Users/seang/source/repos/MosterGenWPF/sounds/noooo.wav";
+            player.SoundLocation = direct;
+            try
+            {
+                player.Load();
+                player.Play();
+            }
+            catch (Exception E) { }
         }
     }
 }

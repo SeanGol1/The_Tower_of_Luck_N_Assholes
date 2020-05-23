@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,6 +30,16 @@ namespace MosterGenWPF
 
         private void BtnStart_Click(object sender, RoutedEventArgs e)
         {
+            SoundPlayer player = new SoundPlayer();
+            var direct = "C:/Users/seang/source/repos/MosterGenWPF/sounds/Showtime.wav";
+            player.SoundLocation = direct;
+            try
+            {
+                player.Load();
+                player.Play();
+            }
+            catch (Exception E) { }
+
             /*
             if (txtRoomENumber1.Text != "" || txtRoomENumber1.Text != null)
             {

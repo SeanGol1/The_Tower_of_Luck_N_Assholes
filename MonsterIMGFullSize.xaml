@@ -7,7 +7,12 @@
         mc:Ignorable="d"
         Title="MonsterIMGFullSize" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="img/MonsterBackground.jpg"/>
+        </Grid.Background>
         <Image Name="imgMonster" HorizontalAlignment="Left" MinWidth="330" MinHeight="339" VerticalAlignment="Top" Margin="40,35,0,0" />
         <Button Content="Stick Around!" Margin="20px" VerticalAlignment="Top" HorizontalAlignment="Right" Width="225" FontSize="22" FontFamily="Terminator Two" Height="51" Click="Button_Click" Background="Red" FontWeight="Bold"/>
+        <Button Content="Win!" Name="btnWin" Margin="0,76,19.6,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="225" FontSize="22" FontFamily="Terminator Two" Height="51"  Background="Red" FontWeight="Bold" Click="BtnWin_Click"/>
+        <Button Content="Lose!" Name="btnLose" Margin="0,132,19.6,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="225" FontSize="22" FontFamily="Terminator Two" Height="51" Background="Red" FontWeight="Bold" Click="BtnLose_Click"/>
     </Grid>
 </Window>

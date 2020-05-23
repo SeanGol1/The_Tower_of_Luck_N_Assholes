@@ -75,7 +75,7 @@
         <TextBox x:Name="tbxLevel3" HorizontalAlignment="Left" Height="33" Margin="250,900,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" MinWidth="400" FontFamily="Arial Black" FontSize="24" Foreground="Black" Background="#BFFFFFFF" FontWeight="Bold"/>
         <TextBox x:Name="tbxLevel2" HorizontalAlignment="Left" Height="33" Margin="250,945,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" MinWidth="400" FontFamily="Arial Black" FontSize="24" Foreground="Black" Background="#BFFFFFFF" FontWeight="Bold"/>
         <TextBox x:Name="tbxLevel1" HorizontalAlignment="Left" Height="33" Margin="250,990,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" MinWidth="400" FontFamily="Arial Black" FontSize="24" Foreground="Black" Background="#BFFFFFFF" FontWeight="Bold"/>
-        
+
         <TextBox x:Name="tbxLevelm1" HorizontalAlignment="Left" Height="33" Margin="984,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" MinWidth="400" FontFamily="Arial Black" FontSize="24" Foreground="Black" Background="#BFFFFFFF" FontWeight="Bold"/>
         <TextBox x:Name="tbxLevelm2" HorizontalAlignment="Left" Height="33" Margin="984,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" MinWidth="400" FontFamily="Arial Black" FontSize="24" Foreground="Black" Background="#BFFFFFFF" FontWeight="Bold"/>
         <TextBox x:Name="tbxLevelm3" HorizontalAlignment="Left" Height="33" Margin="984,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" MinWidth="400" FontFamily="Arial Black" FontSize="24" Foreground="Black" Background="#BFFFFFFF" FontWeight="Bold"/>
@@ -96,10 +96,10 @@
         <TextBox x:Name="tbxLevelm18" HorizontalAlignment="Left" Height="33" Margin="989,887,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" MinWidth="400" FontFamily="Arial Black" FontSize="24" Foreground="Black" Background="#BFFFFFFF" FontWeight="Bold"/>
         <TextBox x:Name="tbxLevelm19" HorizontalAlignment="Left" Height="33" Margin="989,932,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" MinWidth="400" FontFamily="Arial Black" FontSize="24" Foreground="Black" Background="#BFFFFFFF" FontWeight="Bold"/>
         <TextBox x:Name="tbxLevelm20" HorizontalAlignment="Left" Height="33" Margin="989,977,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" MinWidth="400" FontFamily="Arial Black" FontSize="24" Foreground="Black" Background="#BFFFFFFF" FontWeight="Bold"/>
-        
+
         <Button Name="btnSave"  Content="I'll BE BACK!" HorizontalAlignment="Left" Margin="1565,32,0,0" VerticalAlignment="Top" Width="200" Background="Red" Height="39" FontFamily="Terminator Two" FontSize="22" Foreground="#FFFFD300" Click="BtnSave_Click"/>
         <Button Name="btnLoad" Content="IT'S SHOWTIME!" HorizontalAlignment="Left" Margin="1565,88,0,0" VerticalAlignment="Top" Width="200" Background="Red" Height="39" FontFamily="Terminator Two" FontSize="22" Foreground="#FFFFD300" Click="BtnLoad_Click"/>
-        <ComboBox Name="cbxName"  HorizontalAlignment="Left" Margin="325,45,0,0" VerticalAlignment="Top" Width="205"/>
+        <ComboBox Name="cbxName"  HorizontalAlignment="Left" Margin="190,45,0,0" VerticalAlignment="Top" Width="340" Height="69" FontSize="36"/>
 
     </Grid>
 </Window>
