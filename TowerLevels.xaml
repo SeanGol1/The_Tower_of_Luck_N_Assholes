@@ -99,6 +99,7 @@
         
         <Button Name="btnSave"  Content="I'll BE BACK!" HorizontalAlignment="Left" Margin="1565,32,0,0" VerticalAlignment="Top" Width="200" Background="Red" Height="39" FontFamily="Terminator Two" FontSize="22" Foreground="#FFFFD300" Click="BtnSave_Click"/>
         <Button Name="btnLoad" Content="IT'S SHOWTIME!" HorizontalAlignment="Left" Margin="1565,88,0,0" VerticalAlignment="Top" Width="200" Background="Red" Height="39" FontFamily="Terminator Two" FontSize="22" Foreground="#FFFFD300" Click="BtnLoad_Click"/>
+        <ComboBox Name="cbxName"  HorizontalAlignment="Left" Margin="325,45,0,0" VerticalAlignment="Top" Width="205"/>
 
     </Grid>
 </Window>

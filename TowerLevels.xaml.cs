@@ -21,9 +21,12 @@ namespace MosterGenWPF
     public partial class TowerLevels : Window
     {
         public List<RoomEvent> RoomEventList = new List<RoomEvent>();
+        public List<String> DMNameList = new List<string>();
         public TowerLevels()
         {
             InitializeComponent();
+            DMNameList.Add("Sean");
+            cbxName.ItemsSource = DMNameList;
         }
 
 
