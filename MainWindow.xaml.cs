@@ -29,6 +29,7 @@ namespace MosterGenWPF
         public List<Monster> TempMonsterList = new List<Monster>();
         public List<String> PlayerLevelList = new List<String>();
         public List<RoomEvent> RoomEventList = new List<RoomEvent>();
+        public List<Item> ItemsList = new List<Item>();
 
         public string RoomRoll;
         public string BiomRoll;
@@ -227,6 +228,34 @@ namespace MosterGenWPF
             }
 
 
+            //Add Items
+            //Merchant
+            ItemsList.Add(new Item("Feather Token", "10 Gems", "Merchant"));
+            ItemsList.Add(new Item("Breathing Bubble", "30 Gems", "Merchant"));
+            ItemsList.Add(new Item("Clockwork Dog", "1 Gems", "Merchant"));
+            ItemsList.Add(new Item("Staff If Birdcalls", "10 Gems", "Merchant"));
+            ItemsList.Add(new Item("Wand of Smiles", "6 Gems", "Merchant"));
+            ItemsList.Add(new Item("Dark Shard Amulet", "17 Gems", "Merchant"));
+            ItemsList.Add(new Item("Dust of Dissapearance", "30 Gems", "Merchant"));
+            ItemsList.Add(new Item("Quiver of Ehlonna", "25 Gems", "Merchant"));
+
+            //Blacksmith
+            ItemsList.Add(new Item("Spiked Armor", "30 Gems", "Blacksmith"));
+            ItemsList.Add(new Item("Moon Touched Sword", "15 Gems", "Blacksmith"));
+
+            //Alchemist
+            ItemsList.Add(new Item("Potion of Healing", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Growth", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Resistance (Acid)", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Resistance (Cold)", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Resistance (Fire)", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Resistance (Force)", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Resistance (Lightning)", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Resistance (Necrotic)", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Resistance (Poison)", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Resistance (Radiant)", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Resistance (Psychic)", "20 Gems", "Alchemist"));
+            ItemsList.Add(new Item("Potion of Resistance (Thunder)", "20 Gems", "Alchemist"));
 
 
 
@@ -481,10 +510,10 @@ namespace MosterGenWPF
             return false;
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        /*private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             AssignMonsterRolls();
-        }
+        }*/
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
@@ -564,6 +593,12 @@ namespace MosterGenWPF
         {
             TowerLevels tl = new TowerLevels();
             tl.Show();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Merchant MerWin = new Merchant();
+            MerWin.Show();
         }
     }
 }

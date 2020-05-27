@@ -33,7 +33,7 @@
 
         <Button Content="Create" HorizontalAlignment="Left" Margin="596,34,0,0" VerticalAlignment="Top" Width="119" Height="28" Click="Button_Click" />
         <Button Content="Randomize" HorizontalAlignment="Left" Margin="736,33,0,0" VerticalAlignment="Top" Width="119" Height="28" Click="Button_Click_1"/>
-        <Button Content="Get Monsters" HorizontalAlignment="Left" Margin="596,75,0,0" VerticalAlignment="Top" Width="119"  Height="28" Click="Button_Click_2"/>
+        <Button Content="View Merchandise" HorizontalAlignment="Left" Margin="596,75,0,0" VerticalAlignment="Top" Width="119"  Height="28" Click="Button_Click_4" />
         <Button Content="Current Monster List" HorizontalAlignment="Left" Margin="736,75,0,0" VerticalAlignment="Top" Width="119"  Height="28" Click="Button_Click_3"/>
 
         <Label Content="Monter Lvl - D12:" HorizontalAlignment="Left" Name="lblMonsterRoll" Margin="50,325,0,0" VerticalAlignment="Top" FontSize="17" Height="32" Width="139" FontFamily="Tw Cen MT" FontWeight="Bold" Foreground="Red" Background="#7F000000"/>
