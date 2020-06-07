@@ -29,7 +29,7 @@ namespace MosterGenWPF
 
             MainWindow mw = new MainWindow();
             
-           /*if (txtRoomENumber1.Text != "" || txtRoomENumber1.Text != null)
+           if (txtRoomENumber1.Text != "" || txtRoomENumber1.Text != null)
            {
                mw.RoomEventList.Add(new RoomEvent(txtRoomENumber1.Text, txtRoomEDescription1.Text));
            }
@@ -52,7 +52,7 @@ namespace MosterGenWPF
            if (txtRoomENumber6.Text != "" || txtRoomENumber6.Text != null)
            {
                mw.RoomEventList.Add(new RoomEvent(txtRoomENumber6.Text, txtRoomEDescription6.Text));
-           }*/
+           }
 
             this.Close();
            

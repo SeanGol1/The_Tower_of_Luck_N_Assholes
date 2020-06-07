@@ -33,7 +33,6 @@
         <Label Content="1:" HorizontalAlignment="Left" Margin="190,980,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="24"  Background="White"/>
 
 
-
         <Label Content="-1:" HorizontalAlignment="Left" Margin="929,119,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="24" Background="White"/>
         <Label Content="-2:" HorizontalAlignment="Left" Margin="929,166,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="24" Background="White"/>
         <Label Content="-3:" HorizontalAlignment="Left" Margin="929,211,0,0" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="24" Background="White"/>
