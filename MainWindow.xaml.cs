@@ -311,13 +311,15 @@ namespace MosterGenWPF
             MonsterList.Add(new Monster("10", "Young Red Dragon", "98", "4"));
 
             MonsterList.Add(new Monster("11", "Roc", "260", "1"));
-            MonsterList.Add(new Monster("11", "Gynosphinx", "282", "2"));
+            MonsterList.Add(new Monster("11", "Gynosphinx", "282", "5"));
             MonsterList.Add(new Monster("11", "Horned Devil", "74", "3"));
             MonsterList.Add(new Monster("11", "Remorhaz", "258", "4"));
+            MonsterList.Add(new Monster("11", "Doomwake Giant", "MOT 224", "2"));
 
             MonsterList.Add(new Monster("12", "Arcanaloth", "313", "1"));
             MonsterList.Add(new Monster("12", "Archmage", "243", "2"));
             MonsterList.Add(new Monster("12", "Erinyes", "73", "3"));
+            MonsterList.Add(new Monster("12", "Ironscale Hydra", "MOT 231", "4"));
 
             MonsterList.Add(new Monster("13", "Adult Brass Dragon", "105", "1"));
             MonsterList.Add(new Monster("13", "Beholder", "28", "2"));
@@ -330,9 +332,11 @@ namespace MosterGenWPF
             MonsterList.Add(new Monster("14", "Adult Copper Dragon", "88", "4"));
 
             MonsterList.Add(new Monster("15", "Purple Worm", "255", "1"));
-            MonsterList.Add(new Monster("15", "Mummy Lord", "229", "2"));
+            MonsterList.Add(new Monster("15", "Mummy Lord", "229", "5"));
             MonsterList.Add(new Monster("15", "Adult Bronze Dragon", "108", "3"));
-            MonsterList.Add(new Monster("15", "Adult Green Dragon", "0", "4"));
+            MonsterList.Add(new Monster("15", "Adult Green Dragon", "0", "6"));
+            MonsterList.Add(new Monster("15", "Hundred-Handed One", "MOT 225", "2"));
+            MonsterList.Add(new Monster("15", "Typhon", "MOT 246", "4"));
 
             MonsterList.Add(new Monster("16", "Iron Golem", "170", "1"));
             MonsterList.Add(new Monster("16", "Marilith", "61", "2"));
@@ -351,8 +355,9 @@ namespace MosterGenWPF
 
             MonsterList.Add(new Monster("19", "Balor", "MM 55", "1"));
             MonsterList.Add(new Monster("19", "Bael", "MTF 170", "2"));
-            MonsterList.Add(new Monster("19", "Red Abishai", "MTF 160", "3"));
+            MonsterList.Add(new Monster("19", "Red Abishai", "MTF 160", "5"));
             MonsterList.Add(new Monster("19", "Imix", "PoTA 214", "4"));
+            MonsterList.Add(new Monster("19", "Polukranos", "MOT 231", "3"));
 
             MonsterList.Add(new Monster("20", "Leviathan", "MTF 198", "1"));
             MonsterList.Add(new Monster("20", "Nightwalker", "MTF 216", "2"));

@@ -32,7 +32,7 @@ namespace MosterGenWPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SoundPlayer player = new SoundPlayer();
-            var direct = "C:/Users/seang/source/repos/MosterGenWPF/sounds/Stick-around.wav";
+            var direct = "C:/Users/seang/source/repos/MosterGenWPF/sounds/Private_pile.wav";
             player.SoundLocation = direct;
             try
             {

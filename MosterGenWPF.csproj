@@ -74,6 +74,9 @@
     <Compile Include="Monsters.cs" />
     <Compile Include="RoomEvent.cs" />
     <Compile Include="RoomNumber.cs" />
+    <Compile Include="RoomSetup.xaml.cs">
+      <DependentUpon>RoomSetup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Startup.xaml.cs">
       <DependentUpon>Startup.xaml</DependentUpon>
     </Compile>
@@ -101,6 +104,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MonsterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RoomSetup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

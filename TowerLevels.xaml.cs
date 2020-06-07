@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,6 +28,8 @@ namespace MosterGenWPF
         {
             InitializeComponent();
             DMNameList.Add("Sean");
+            DMNameList.Add("Devon");
+
             cbxName.ItemsSource = DMNameList;
         }
 
@@ -383,39 +386,41 @@ namespace MosterGenWPF
 
             GetDataLevels();
 
+
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); ;
+            var result = ofd.ShowDialog();
+
             // Set a variable to the Documents path.
             string docPath =
-              Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+              Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
 
             // Write the string array to a new file named "WriteLines.txt".
-            using (StreamWriter outputFile = new StreamWriter(System.IO.Path.Combine(docPath, "/Users/seang/source/repos/MosterGenWPF/save/Test1.txt")))
+            using (StreamWriter outputFile = new StreamWriter(System.IO.Path.Combine(ofd.FileName)))
             {
                 outputFile.WriteLine("#," + DateTime.Now + "," + cbxName.SelectedValue);
                 foreach (RoomEvent ev in RoomEventList)
                 {
                     outputFile.WriteLine(ev.RoomNumber + "," + ev.EventName);
                 }
-            }
 
+                string newfilename = cbxName.SelectedValue + ".txt";
+
+                //File.Move(ofd.FileName, @"C:\Users\seang\source\repos\MosterGenWPF\save\" + newfilename);
+            }
         }
 
         private void BtnLoad_Click(object sender, RoutedEventArgs e)
-        {            
-            SoundPlayer player = new SoundPlayer();
-            var direct = "C:/Users/seang/source/repos/MosterGenWPF/sounds/Showtime.wav";
-            player.SoundLocation = direct;
-            try
-            {
-                player.Load();
-                player.Play();
-            }
-            catch (Exception E) { }
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var result = ofd.ShowDialog();
 
 
             try
             {
-                string[] lines = File.ReadAllLines("C:/Users/seang/source/repos/MosterGenWPF/save/Test1.txt");
-                //string[] lines = File.ReadAllLines(System.IO.Path.ChangeExtension("Test1", ".txt"))
+                string[] lines = File.ReadAllLines(ofd.FileName);
+                
 
                 foreach (String line in lines)
                 {
@@ -434,6 +439,16 @@ namespace MosterGenWPF
             {
 
             }
+
+            SoundPlayer player = new SoundPlayer();
+            var direct = "C:/Users/seang/source/repos/MosterGenWPF/sounds/Showtime.wav";
+            player.SoundLocation = direct;
+            try
+            {
+                player.Load();
+                player.Play();
+            }
+            catch (Exception E) { }
 
             LoadLevels();
 

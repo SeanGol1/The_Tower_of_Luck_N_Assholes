@@ -23,3 +23,5 @@ C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\TowerLevels.baml
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\MonsterIMGFullSize.baml
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\Merchant.g.cs
 C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\Merchant.baml
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\RoomSetup.g.cs
+C:\Users\seang\source\repos\MosterGenWPF\obj\Debug\RoomSetup.baml
