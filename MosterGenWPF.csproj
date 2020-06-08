@@ -60,6 +60,7 @@
     </ApplicationDefinition>
     <Compile Include="Biom.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="Homebrew Monster List.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Merchant.xaml.cs">
       <DependentUpon>Merchant.xaml</DependentUpon>
