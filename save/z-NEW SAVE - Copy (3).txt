@@ -1,0 +1,22 @@
+#,08/06/2020 18:36:33,Sean
+-3,Death Knight
+-5,Long Rest Room
+-6,Adult Copper Dragon
+-7,Demilich *
+-9,Leviathon
+-10,Pit Fiend
+-11,Goristro
+-3,Death Knight
+-5,Long Rest Room
+-6,Adult Copper Dragon
+-7,Demilich *
+-9,Leviathon
+-10,Pit Fiend
+-11,Goristro
+-3,Death Knight
+-5,Long Rest Room
+-6,Adult Copper Dragon
+-7,Demilich *
+-9,Leviathon
+-10,Pit Fiend
+-11,Goristro

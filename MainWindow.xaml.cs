@@ -47,9 +47,10 @@ namespace MosterGenWPF
             CreateList();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        public void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            tbxCurrentRoom.Text = "0";
+            
+        tbxCurrentRoom.Text = "0";
             lblPlayerLevel.Content = PlayerLVL;
             //Add CR Levels
             if (PlayerLVL == "2 x lvl 14")
@@ -359,21 +360,61 @@ namespace MosterGenWPF
             MonsterList.Add(new Monster("19", "Imix", "PoTA 214", "4"));
             MonsterList.Add(new Monster("19", "Polukranos", "MOT 231", "3"));
 
-            MonsterList.Add(new Monster("20", "Leviathan", "MTF 198", "1"));
+            //MonsterList.Add(new Monster("20", "Leviathan", "MTF 198", "1"));
             MonsterList.Add(new Monster("20", "Nightwalker", "MTF 216", "2"));
             MonsterList.Add(new Monster("20", "Pit Fiend", "MM 77", "3"));
             MonsterList.Add(new Monster("20", "Ogrémoch", "PoTA 216", "4"));
             MonsterList.Add(new Monster("20", "Ancient White Dragon", "MM 100", "5"));
             MonsterList.Add(new Monster("20", "Ancient Brass Dragon", "MM 104", "6"));
 
-
+            //Homebrew Monsters
+            MonsterList.Add(new Monster("17", "Abysswalker", "Homebrew", "0"));
+            MonsterList.Add(new Monster("12", "Alpha Minotaur", "Homebrew", "0"));
+            MonsterList.Add(new Monster("9", "Baku", "Homebrew", "0"));
+            MonsterList.Add(new Monster("14", "Balewing", "Homebrew", "0"));
+            MonsterList.Add(new Monster("16", "Black Root", "Homebrew", "0"));
+            MonsterList.Add(new Monster("17", "Brachydios", "Homebrew", "0"));
+            MonsterList.Add(new Monster("16", "Cenokian Wraith", "Homebrew", "0"));
+            MonsterList.Add(new Monster("14", "Cerynitis", "Homebrew", "0"));
+            MonsterList.Add(new Monster("15", "Chosen of Baphomet", "Homebrew", "0"));
+            MonsterList.Add(new Monster("17", "Colossal Undead", "Homebrew", "0"));
+            MonsterList.Add(new Monster("17", "Crypt Horror", "Homebrew", "0"));
+            MonsterList.Add(new Monster("18", "Crystalline Dragon", "Homebrew", "0"));
+            MonsterList.Add(new Monster("15", "Dolgotha", "Homebrew", "0"));
+            MonsterList.Add(new Monster("15", "Fusion Elemental", "Homebrew", "0"));
+            MonsterList.Add(new Monster("16", "Gargolem", "Homebrew", "0"));
+            MonsterList.Add(new Monster("19", "Ghoul Regent", "Homebrew", "0"));
+            MonsterList.Add(new Monster("30", "Godzilla", "Homebrew", "0"));
+            MonsterList.Add(new Monster("10", "Greater Basilisk", "Homebrew", "0"));
+            MonsterList.Add(new Monster("14", "Green Enchantress", "Homebrew", "0"));
+            MonsterList.Add(new Monster("16", "Implacable Assassin", "Homebrew", "0"));
+            MonsterList.Add(new Monster("13", "Krampus", "Homebrew", "0"));
+            MonsterList.Add(new Monster("17", "Megalodon", "Homebrew", "0"));
+            MonsterList.Add(new Monster("14", "Morvudd", "Homebrew", "0"));
+            MonsterList.Add(new Monster("14", "Mula", "Homebrew", "0"));
+            MonsterList.Add(new Monster("10", "Nightblade", "Homebrew", "0"));
+            MonsterList.Add(new Monster("15", "Pesta", "Homebrew", "0"));
+            MonsterList.Add(new Monster("15", "Plated Behir", "Homebrew", "0"));
+            MonsterList.Add(new Monster("14", "Royal Griffin", "Homebrew", "0"));
+            MonsterList.Add(new Monster("1", "Sea Rex", "Homebrew", "0"));
+            MonsterList.Add(new Monster("15", "Shadow Dragon", "Homebrew", "0"));
+            MonsterList.Add(new Monster("12", "Soul of Ember", "Homebrew", "0"));
+            MonsterList.Add(new Monster("15", "Spawn of Orcus", "Homebrew", "0"));
+            MonsterList.Add(new Monster("11", "Spriggan", "Homebrew", "0"));
+            MonsterList.Add(new Monster("10", "The Rock Golem", "Homebrew", "0"));
+            MonsterList.Add(new Monster("20", "Thunderbird", "Homebrew", "0"));
+            MonsterList.Add(new Monster("12", "Tormentor", "Homebrew", "0"));
+            MonsterList.Add(new Monster("16", "Ulfhedinn", "Homebrew", "0"));
+            MonsterList.Add(new Monster("19", "Varghulf", "Homebrew", "0"));
+            MonsterList.Add(new Monster("16", "War Titan", "Homebrew", "0"));
+            MonsterList.Add(new Monster("17", "Wild Hunt General", "Homebrew", "0"));
 
         }
 
         //Create 
         public void Button_Click(object sender, RoutedEventArgs e)
         {
-            Random rd = new Random();
+            //Random rd = new Random();
 
             if (tbxRoomRoll.Text != "")
                 RoomRoll = Convert.ToString(tbxRoomRoll.Text);
@@ -466,8 +507,8 @@ namespace MosterGenWPF
 
         public void GetMonsterList()
         {
-            Random rd = new Random();
-            int index = rd.Next(MonsterList.Count);
+            //Random rd = new Random();
+            //int index = rd.Next(MonsterList.Count);
 
         }
 
@@ -522,9 +563,9 @@ namespace MosterGenWPF
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MonsterWindow monsterWindow = new MonsterWindow(CRRoll);            
+            MonsterWindow monsterWindow = new MonsterWindow(CRRoll);
             monsterWindow.Show();
-            
+
         }
 
         private void BtnRoom_Click(object sender, RoutedEventArgs e)

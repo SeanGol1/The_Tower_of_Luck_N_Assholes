@@ -1,8 +1,12 @@
-23/05/2020 03:40:36,Sean
+#,09/06/2020 01:59:51,Sean
 -3,Death Knight
+-4,Royal Griffin + Death Tyrant
 -5,Long Rest Room
 -6,Adult Copper Dragon
--7,Demilich *
+-7,Demilich
+-8,Young Shadow + Adult Brass Dragon
 -9,Leviathon
 -10,Pit Fiend
 -11,Goristro
+-13,Nightwalker*
+-15,Long Rest Room
